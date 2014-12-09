@@ -90,7 +90,7 @@ class profiles::ir4wls {
   create_resources('wls_cluster', $cluster_settings, $cluster_instances_defaults)
 
   ## Datasource Cutover
-  create_resources('ir4wls::dspassword',$datasource, $default_params)
+  create_resources('ir4wls::dspassword',$datasource, $datasource_defaults)
 
   ## Sequence Settings
   Ir4wls::Nodemanager<| |>    ->
