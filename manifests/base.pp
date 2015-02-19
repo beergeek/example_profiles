@@ -36,13 +36,13 @@ class profiles::base {
   ensure_packages($packages)
 
   # manage time, timezones, and locale
-  #class { 'profiles::time_locale': }
+  class { 'profiles::time_locale': }
 
   # manage shells available
   class { 'profiles::security': }
 
   # manage SSH
-  #class { 'profiles::ssh': }
+  class { 'profiles::ssh': }
 
   # manage SUDO
   class { 'profiles::sudo': }
@@ -51,13 +51,13 @@ class profiles::base {
   class { 'profiles::logging': }
 
   # manage DNS stuff
-  #class { 'profiles::dns': }
+  class { 'profiles::dns': }
 
   # manage Email stuff
   class { 'profiles::mail': }
 
   # authentication
-  #class { 'profiles::auth': }
+  class { 'profiles::auth': }
 
   # firewall
   if $enable_firewall {
